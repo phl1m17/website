@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Phil Manag | Projects
+        </title>
+        <link rel="icon" href="images/sprite_0.png">
+        <link rel = "stylesheet" href="style.css">
+    </head>
+    <body class="projects-body">
+        <header class="header">
+            <a style="text-decoration: none" href="index.html">
+                <p>Phil Manag</p>
+            </a>
+            <img class="menu" src="images/hamburger-menu.svg" id="toggleImage">
+        </header>
+        <div class="hidden" id="hiddenContent">
+            <div>
+                <a href="projects.html">
+                    <span class="underline">
+                        Projects
+                    </span>
+                </a>
+                <br>
+                <a href="photos.html">
+                    <span class="underline">
+                        Photos
+                    </span>
+                </a>
+                <br>
+                <a href="extracurriculars.html">
+                    <span class="underline">
+                        Extracurriculars
+                    </span>
+                </a>
+            </div>
+        </div>
+        <main>
+            <div class="main">
+                <div class="projects">
+                    <a href="https://github.com/phl1m17/SteveRun" target="_blank">
+                        <p >
+                            Steve Run | Java Program
+                        </p>
+                    </a>
+                    <div>
+                        
+                    </div>
+                </div>
+                <hr class="line">
+                <div class="projects">
+                    <a href="https://github.com/phl1m17/ICS4UO-Culminating" target="_blank">
+                        <p>
+                            NSS Pokemon Battle | Java Program
+                        </p>
+                    </a>
+                </div>
+                <hr class="line">
+                <div class="projects">
+                    <a href="https://phl1m17.github.io/SiO2vsSO2-Infographic/" target="_blank">
+                        <p>
+                            Chemistry Infographic | Website
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <div>
+            <hr class="footer-line">
+        </div>
+        <footer class="foot">
+            <a href="mailto:clarkmanag@gmail.com">
+                <img src="images/gmail.svg">
+            </a>
+            <a href="https://www.instagram.com/philm_17/" target="_blank">
+                <img src="images/instagram.svg">
+            </a>
+            <a href="https://github.com/phl1m17" target="_blank">
+                <img src="images/github.svg">
+            </a>
+        </footer>
+        <script>
+            const image = document.getElementById('toggleImage');
+            const content = document.getElementById('hiddenContent');
+
+            image.addEventListener('click', () => {
+                if (content.classList.contains('show')) {
+                    content.classList.add('fadeOut');
+
+                    setTimeout(() => {
+                        content.classList.remove('show');
+                        content.classList.remove('fadeOut');
+                        content.style.display = 'none';
+                    }, 500);
+                } else {
+                    content.style.display = 'block';
+                    content.classList.add('show');
+                }
+            });
+        </script>
+    </body>
+</html>

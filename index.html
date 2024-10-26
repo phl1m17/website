@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Phil Manag | Portfolio
+        </title>
+        <link rel = "stylesheet" href="style.css">
+        <link rel="icon" href="images/sprite_0.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <a style="text-decoration: none" href="index.html">
+                <p>Phil Manag</p>
+            </a>
+            <img class="menu" src="images/hamburger-menu.svg" id="toggleImage">
+        </header>
+        <div class="hidden" id="hiddenContent">
+            <div>
+                <a href="projects.html">
+                    <span class="underline">
+                        Projects
+                    </span>
+                </a>
+                <br>
+                <a href="photos.html">
+                    <span class="underline">
+                        Photos
+                    </span>
+                </a>
+                <br>
+                <a href="extracurriculars.html">
+                    <span class="underline">
+                        Extracurriculars
+                    </span>
+                </a>
+            </div>
+        </div>
+        <main class="body">
+            <div>
+                <div>
+                    <p class="i-am">
+                        Hello, I am
+                    </p>
+                    <p class="name">
+                        Phil Manag
+                    </p>
+                </div>
+                <div>
+                    <div class = "image">
+                        <img class = "me" src="Images/me.jpg">
+                        <img class = "me" src="Images/me2.png">
+                    </div>
+                </div>
+                <div class="about">
+                    <p class = "intro">
+                        I am a 16-year-old high school student 
+                        with a passion for software and web development. 
+                        I’ve been diving into the world of coding through 
+                        hands-on experience with Java, Python, HTML, and CSS, 
+                        and I’m excited about the endless possibilities of technology. 
+                        I’m eager to learn and grow in this field. My goal is to 
+                        harness my skills to create impactful projects and 
+                        eventually build a career as a software or website developer. 
+                    </p>
+                </div>
+                <div>
+                    <hr>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <a href="mailto:clarkmanag@gmail.com">
+                <img src="images/gmail.svg">
+            </a>
+            <a href="https://www.instagram.com/philm_17/" target="_blank">
+                <img src="images/instagram.svg">
+            </a>
+            <a href="https://github.com/phl1m17" target="_blank">
+                <img src="images/github.svg">
+            </a>
+        </footer>
+        <script>
+            const image = document.getElementById('toggleImage');
+            const content = document.getElementById('hiddenContent');
+
+            image.addEventListener('click', () => {
+                if (content.classList.contains('show')) {
+                    content.classList.add('fadeOut');
+
+                    setTimeout(() => {
+                        content.classList.remove('show');
+                        content.classList.remove('fadeOut');
+                        content.style.display = 'none';
+                    }, 500);
+                } else {
+                    content.style.display = 'block';
+                    content.classList.add('show');
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Phil Manag | Photos
+        </title>
+        <link rel="icon" href="images/sprite_0.png">
+        <link rel = "stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <a style="text-decoration: none" href="index.html">
+                <p>Phil Manag</p>
+            </a>
+            <img class="menu" src="images/hamburger-menu.svg" id="toggleImage">
+        </header>
+        <div class="hidden" id="hiddenContent">
+            <div>
+                <a href="projects.html">
+                    <span class="underline">
+                        Projects
+                    </span>
+                </a>
+                <br>
+                <a href="photos.html">
+                    <span class="underline">
+                        Photos
+                    </span>
+                </a>
+                <br>
+                <a href="extracurriculars.html">
+                    <span class="underline">
+                        Extracurriculars
+                    </span>
+                </a>
+            </div>
+        </div>
+        <main>
+
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            const image = document.getElementById('toggleImage');
+            const content = document.getElementById('hiddenContent');
+
+            image.addEventListener('click', () => {
+                if (content.classList.contains('show')) {
+                    content.classList.add('fadeOut');
+
+                    setTimeout(() => {
+                        content.classList.remove('show');
+                        content.classList.remove('fadeOut');
+                        content.style.display = 'none';
+                    }, 500);
+                } else {
+                    content.style.display = 'block';
+                    content.classList.add('show');
+                }
+            });
+        </script>
+    </body>
+</html>

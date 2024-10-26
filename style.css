@@ -1,0 +1,251 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: linear-gradient(to top right, rgb(111 214 255), rgb(191 240 152));
+    background-size: cover;
+    background-attachment: fixed; 
+    height: 100%;
+}
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.0);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.header p {
+    margin: 10px;
+    color: rgb(2, 45, 45);
+    transition: font-size 0.2s ease-in-out;
+}
+.header p:hover {
+    font-size: 31px;
+}
+.menu {
+    width: 35px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu:hover {
+    transform: scale(1.2);
+}
+
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.show {
+    position: fixed;
+    z-index: 1000;
+    color: rgb(2, 45, 45);
+    background: rgba(255, 255, 255, 0.0);
+    backdrop-filter: blur(10px);
+    font-size: 50px;
+    font-weight: 500;
+    top: 74px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    animation: fadeIn 0.5s ease forwards; 
+    text-align: center;
+}
+
+.fadeOut {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+span{
+    color: rgb(2, 45, 45);
+}
+.underline {
+    position: relative;
+    display: inline-block;
+    margin: 10px 0; 
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent; 
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    transform: translateX(-100%);
+}
+
+.underline:hover::after {
+    background-color: rgb(2, 45, 45); 
+    transform: translateX(0); 
+}
+
+
+/* Index Body Styles */
+main {
+    margin: 74px 10px 10px 10px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+main div {
+    color: rgb(2, 45, 45);
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+    font-family: "Roboto Condensed";
+}
+
+.body p {
+    text-align: center;
+    margin: 0;
+    font-size: 60px;
+}
+
+.body .name {
+    font-weight: 600;
+    font-size: 100px;
+}
+
+.me {
+    width: 25%; 
+    border-radius: 30px;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.me:hover {
+    transform: scale(1.06);
+}
+
+.image {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 15px 95px; 
+}
+
+hr {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(2, 45, 45);
+    margin: 50px 20px 20px 20px; 
+}
+
+.about p{
+    padding: 40px 10px 20px 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+
+
+/* Footer Styles */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0px 30px 0px 30px;
+}
+
+footer img {
+    width: 30px;
+}
+
+/* Projects Body Style */
+a {
+    text-decoration: none;
+    color: rgb(2, 45, 45);
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.projects{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    color: (2, 45, 45);
+    display: flex;
+    flex-direction: column;
+}
+.line{
+    margin: 0px;
+}
+.footer-line{
+    margin-top: 122px;
+}
+.projects-body{
+    padding: 0px;
+}
+
+@media (min-width: 769px) {
+    footer{
+        margin: 0px 350px;
+    }
+    .about p{
+        padding: 60px 130px 10px 130px;
+        font-size: 25px;
+    }
+    .footer-line{
+        margin-top: 180px;
+    }
+}
+@media (max-width: 768px) {
+    .body .name {
+        font-size: 60px;
+    }
+    .body .i-am{
+        font-size: 40px;
+    }
+    .me {
+        width: 40%;
+    }
+    .image{
+        margin: 20px 20px;
+    }
+    .show{
+        font-size: 35px;
+    }
+}
